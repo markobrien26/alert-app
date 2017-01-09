@@ -13,8 +13,24 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:entries="@array/alerts"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:entries="@array/planets" />
+        android:layout_marginTop="121dp"
+        style="@android:style/Widget.Holo.WebTextView"
+        android:divider="@android:color/holo_blue_dark"
+        android:dividerHeight="1dp"
+        android:id="@+id/alertList" />
+
+    <TextView
+        android:text="Alert History"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:id="@+id/alertTitle"
+        android:textSize="34sp"
+        android:textColor="@color/blueboston" />
 </RelativeLayout>

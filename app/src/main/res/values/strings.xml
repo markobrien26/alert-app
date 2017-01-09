@@ -16,10 +16,14 @@
     </string>
     <string name="title_item_list">Items</string>
     <string name="title_item_detail">Item Detail</string>
-    <string-array name="planets">
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
+    <string-array name="alerts">
+        <item>2017-01-10 10:23:16 \n
+            SSH brute force attack</item>
+        <item>2017-01-09 16:38:04 \n
+            Openstack Load high</item>
+        <item>2017-01-04 11:18:45 \n
+            Suspicious DNS activity</item>
+        <item>2017-01-03 10:44:55 \n
+            Openstack Throughput High</item>
     </string-array>
 </resources>
