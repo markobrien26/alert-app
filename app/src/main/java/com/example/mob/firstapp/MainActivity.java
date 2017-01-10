@@ -4,8 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.content.Intent;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,19 +19,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.i(TAG, "onCreate");
 
-        Button loginButton = (Button)findViewById(R.id.loginButton);
         final EditText username = (EditText)findViewById(R.id.usernameField);
         final EditText password = (EditText)findViewById(R.id.passwordField);
 
-        loginButton.setOnClickListener(
-                new Button.OnClickListener(){
-                    public void onClick(View w){
-                        if (username.getText().toString().contains("admin") &&
+    }
+
+    public void login(View view){
+
+        final EditText username = (EditText)findViewById(R.id.usernameField);
+        final EditText password = (EditText)findViewById(R.id.passwordField);
+
+        if (username.getText().toString().contains("admin") &&
                                 password.getText().toString().contains("admin")) {
-                            setContentView(R.layout.activity_main2);
-                        }
-                    }
-                }
-        );
+            Intent i = new Intent(this, AlertHistory.class);
+            startActivity(i);
+        }
+        else {
+            Toast.makeText(getApplicationContext(), "Invalid details", Toast.LENGTH_LONG ).show();
+        }
+
     }
 }
